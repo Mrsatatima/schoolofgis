@@ -30,8 +30,8 @@ class Module(Info):
     course_material = models.FileField(upload_to=None, max_length=100, blank=True)
     practical_exercise = models.FileField(upload_to=None, max_length=100, blank=True)
     course = models.ForeignKey("Course", on_delete=models.CASCADE,
-                               related_name="courses",
-                               related_query_name="course")
+                               related_name="modules",
+                               related_query_name="module")
 
 
 class Student(models.Model):
