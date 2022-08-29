@@ -7,8 +7,8 @@ from django.utils.text import slugify
 class Info(models.Model):
     title = models.CharField(max_length=50)
     image = models.ImageField(upload_to=None, height_field=None,
-                              width_field=None, max_length=None)
-    description = models.FileField(upload_to=None, max_length=100)
+                              width_field=None, max_length=None, blank=True)
+    description = models.FileField(upload_to=None, max_length=100, blank=True)
     slug = models.SlugField(max_length=100, editable=False)
 
     class Meta:
@@ -27,8 +27,8 @@ class Course(Info):
 
 
 class Module(Info):
-    course_material = models.FileField(upload_to=None, max_length=100)
-    practical_exercise = models.FileField(upload_to=None, max_length=100)
+    course_material = models.FileField(upload_to=None, max_length=100, blank=True)
+    practical_exercise = models.FileField(upload_to=None, max_length=100, blank=True)
     course = models.ForeignKey("Course", on_delete=models.CASCADE,
                                related_name="courses",
                                related_query_name="course")
@@ -57,6 +57,10 @@ class Quiz(models.Model):
     question = models.CharField(max_length=250)
     options = models.CharField(max_length=250)
     answer = models.CharField(max_length=100)
+    
+
+    class Meta:
+        verbose_name_plural = "quizes"
 
 
 class Score(models.Model):
