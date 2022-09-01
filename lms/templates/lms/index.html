@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href={% static '/styles/index.css' %}>
+</head>
+<body>
+    <header>
+        <a href={% url 'index' %} id ="logo">
+            <img src={% static '/images/sog logo white.png' %} alt="" id="logo-image">
+            <p id="logo-name">School of GIS</p>
+        </a>
+        <div id="profile">
+            <a href="" id="user-group" >
+               <div class="profile">
+                <img src={% static "/images/profile.png" %} alt="profile pic" id="profile-pic" />
+                <span class="notification"></span>
+               </div>
+                <p class="user-name"> Abdullahi</p>
+              </a>
+              <a href="">
+                <p id="profile-name">login</p>
+              </a>
+        </div>
+    </header>
+    <main>
+        <section class="sectio-1">
+            <h1 class="section-header"></h1>
+            <img src="" alt="" class="section-image">
+            <p class="sectiontext"></p>
+        </section>
+        <section class="section-1">
+            <h1 class="section-header"></h1>
+            <img src="" alt="" class="section-image">
+            <p class="sectiontext"></p>
+        </section>
+    </main>
+    
+</body>
+</html>

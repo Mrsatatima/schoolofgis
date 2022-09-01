@@ -1,0 +1,180 @@
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  background-color: var(--color-primary-white-500);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+#profile-section {
+  background-color: var(--color-primary-white-500);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+#logo {
+  background-color: var(--color-primary-blue-300);
+  padding: 0.1rem;
+}
+#logo img {
+  height: 30px;
+  width: 30px;
+}
+.search {
+  width: 70%;
+  height: 1rem;
+  margin-left: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--color-primary-white-500);
+  border: 0.1px solid;
+  color: var(--color-primary-blue-200);
+}
+.profile {
+  display: flex;
+}
+#profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+#notification {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(50, 200, 50);
+  border-radius: 5px;
+  display: block;
+  margin-left: -0.4rem;
+}
+#side {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary-blue-300);
+  width: 15%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+#side nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#logo2 {
+  width: 129px;
+  margin: 3rem auto;
+}
+#side-drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+}
+.side-btn {
+  margin-bottom: 2rem;
+}
+.side-btn-text {
+  text-decoration: none;
+  color: var(--color-primary-white-400);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--size-2);
+  padding: 0.5rem;
+}
+.side-btn:nth-of-type(1) .side-btn-text {
+  color: var(--color-primary-white-500);
+  font-weight: bold;
+  border-left: solid 2px var(--color-primary-blue-500);
+}
+
+.side-btn-text svg {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+.side-btn-text:hover {
+  background-color: var(--color-primary-white-500);
+  color: var(--color-primary-blue-300);
+  border-radius: 4px;
+}
+.side-btn:nth-of-type(1) .side-btn-text:hover {
+  color: var(--color-primary-blue-300);
+  font-weight: bold;
+  border-left: solid 2px red;
+}
+#side-footer {
+  width: 70%;
+  margin: 0 auto 2rem auto;
+  background-image: url("/images/steamledge_logo 2.png");
+  background-position: right;
+  background-size: 50%;
+  background-color: rgba(3, 61, 99);
+  color: var(--color-primary-white-500);
+  font-size: var(--size-1);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+}
+#nav-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  background-color: var(--color-primary-white-500);
+  position: fixed;
+  bottom: 0;
+}
+
+.nav-btn-text {
+  text-decoration: none;
+  color: var(--color-primary-black-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--size-2);
+}
+.nav-btn-text svg {
+  width: 20px;
+}
+
+#side {
+  display: none;
+}
+#profile-section {
+  display: none;
+}
+@media screen and (min-width: 1090px) {
+  #bottom,
+  header {
+    display: none;
+  }
+  #side,
+  #profile-section {
+    display: flex;
+  }
+  main {
+    margin: 0;
+    margin-left: 15%;
+    width: 85%;
+  }
+  #notification {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(50, 200, 50);
+    border-radius: 5px;
+    display: block;
+    margin-left: -0.7rem;
+  }
+  .profile {
+    padding: 0.5rem;
+  }
+}
