@@ -1,180 +1,180 @@
-main {
-  width: 90%;
-  margin: 0 auto;
+h1,
+ul,
+ol,
+a,
+img,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+html {
+  background-color: rgb(200, 200, 200);
+  --title-font: "Open sans", sans-serif;
+  --other-font: "Roboto", sans-serif;
+
+  --size-0: 0.6rem;
+  --size-1: 0.8rem;
+  --size-2: 1rem;
+  --size-3: 1.5rem;
+  --size-4: 2rem;
+  --size-5: 2.5rem;
+
+  --color-primary-blue-200: rgb(218, 160, 109);
+  --color-primary-blue-100: rgb(149, 69, 53);
+  --color-primary-blue-300: rgb(165, 42, 42);
+  --color-primary-blue-500: rgb(128, 0, 32);
+
+  --color-primary-white-500: rgb(255, 255, 255);
+  --color-primary-white-400: rgb(240, 240, 240);
+
+  --color-primary-black-500: rgb(20, 20, 20);
+  --color-primary-black-400: rgb(50, 50, 50);
+  --color-primary-black-300: rgb(80, 80, 80);
+  --color-primary-black-200: rgb(100, 100, 100);
+  --color-primary-black-100: rgb(150, 150, 150);
+}
+
+body {
+  font-family: var(--other-font);
+  width: 100%;
+  margin: 0;
+}
+main,
+#header-container{
+  max-width: 1400px;
+  width:95%;
+  margin:auto;
+}
+#header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 header {
-  background-color: var(--color-primary-white-500);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  width: 100%;
+  padding: .5rem 0rem;
+  background-color: var(--color-primary-blue-500);
 }
-#profile-section {
-  background-color: var(--color-primary-white-500);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
+
 #logo {
-  background-color: var(--color-primary-blue-300);
-  padding: 0.1rem;
-}
-#logo img {
-  height: 30px;
-  width: 30px;
-}
-.search {
-  width: 70%;
-  height: 1rem;
-  margin-left: 0.2rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  background-color: var(--color-primary-white-500);
-  border: 0.1px solid;
-  color: var(--color-primary-blue-200);
-}
-.profile {
   display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 20rem;
+  justify-content: space-between;
+}
+#logo-image {
+  width: 50px;
+  height: 50px;
+}
+#logo-name {
+  font-size: 2rem;
+  color: var(--color-primary-white-500);
+  font-weight: bold;
+  font-family: "Uncial Antiqua", cursive;
+}
+
+#profile {
+  display: flex;
+  justify-content: flex-end;
+  width: 20rem;
+  align-items: center;
+}
+
+#user-group{
+    display: flex;
+    align-items: center;
 }
 #profile-pic {
-  width: 30px;
-  height: 30px;
-  border-radius: 20px;
+  width: 50px;
 }
-#notification {
-  width: 10px;
-  height: 10px;
-  background-color: rgb(50, 200, 50);
-  border-radius: 5px;
+
+.notification {
+  position: relative;
   display: block;
-  margin-left: -0.4rem;
-}
-#side {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary-blue-300);
-  width: 15%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-}
-#side nav {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#logo2 {
-  width: 129px;
-  margin: 3rem auto;
-}
-#side-drawer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0.5rem 0;
-  margin: 0 auto;
-}
-.side-btn {
-  margin-bottom: 2rem;
-}
-.side-btn-text {
-  text-decoration: none;
-  color: var(--color-primary-white-400);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: var(--size-2);
-  padding: 0.5rem;
-}
-.side-btn:nth-of-type(1) .side-btn-text {
-  color: var(--color-primary-white-500);
-  font-weight: bold;
-  border-left: solid 2px var(--color-primary-blue-500);
+  width: 10px;
+  background-color: rgb(245, 7, 7);
+  height: 10px;
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin-left: 2em;
+  margin-top: -1rem;
 }
 
-.side-btn-text svg {
-  width: 20px;
-  margin-right: 0.5rem;
-}
-.side-btn-text:hover {
-  background-color: var(--color-primary-white-500);
-  color: var(--color-primary-blue-300);
-  border-radius: 4px;
-}
-.side-btn:nth-of-type(1) .side-btn-text:hover {
-  color: var(--color-primary-blue-300);
-  font-weight: bold;
-  border-left: solid 2px red;
-}
-#side-footer {
-  width: 70%;
-  margin: 0 auto 2rem auto;
-  background-image: url("/images/steamledge_logo 2.png");
-  background-position: right;
-  background-size: 50%;
-  background-color: rgba(3, 61, 99);
-  color: var(--color-primary-white-500);
-  font-size: var(--size-1);
-  font-weight: bold;
-  padding: 1rem;
-  border-radius: 5px;
-}
-#nav-group {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 0.5rem 0;
-  background-color: var(--color-primary-white-500);
-  position: fixed;
-  bottom: 0;
-}
-
-.nav-btn-text {
-  text-decoration: none;
-  color: var(--color-primary-black-100);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: var(--size-2);
-}
-.nav-btn-text svg {
-  width: 20px;
-}
-
-#side {
+.user-name {
   display: none;
 }
-#profile-section {
-  display: none;
+
+.profile,
+.user-name-logged {
+  margin-right: 1rem;
 }
-@media screen and (min-width: 1090px) {
-  #bottom,
-  header {
+
+#profile-name,
+.user-name-logged {
+  color: white;
+  font-family: var(--other-font);
+  font-size: 1.2rem;
+  margin: 0 0 0 1rem;
+
+}
+
+#profile-name:hover{
+    background-color: var(--color-primary-white-500);
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    color: var(--color-primary-blue-500);
+    font-weight: normal;
+
+}
+
+
+@media screen and (max-width: 700px) {
+    header {
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+    }
+  #profile-pic {
+    width: 15px;
+  }
+  #logo-image {
+    width: 30px;
+    height: 30px;
+  }
+  #logo-name {
     display: none;
   }
-  #side,
-  #profile-section {
-    display: flex;
-  }
-  main {
-    margin: 0;
-    margin-left: 15%;
-    width: 85%;
-  }
-  #notification {
-    width: 10px;
-    height: 10px;
-    background-color: rgb(50, 200, 50);
-    border-radius: 5px;
+  .notification {
+    position: relative;
     display: block;
-    margin-left: -0.7rem;
+    width: 2px;
+    background-color: rgb(245, 7, 7);
+    height: 2px;
+    border-radius: 2px;
+    padding: 0.1rem;
+    margin-left: .7rem;
+    margin-top: -0.5rem;
   }
-  .profile {
-    padding: 0.5rem;
+  #profile-name,
+  .user-name-logged {
+    font-size: 0.5rem;
   }
+  .profile,
+.user-name-logged {
+  margin-right: .2rem;
+}
 }
