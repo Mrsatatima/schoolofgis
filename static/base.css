@@ -22,7 +22,7 @@ a {
 }
 
 html {
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(255, 255, 255);
   --title-font: "Open sans", sans-serif;
   --other-font: "Roboto", sans-serif;
 
@@ -100,23 +100,23 @@ header {
     align-items: center;
 }
 #profile-pic {
-  width: 50px;
+  width: 30px;
 }
 
 .notification {
   position: relative;
   display: block;
-  width: 10px;
+  width: 5px;
   background-color: rgb(245, 7, 7);
-  height: 10px;
-  border-radius: 10px;
+  height: 5px;
+  border-radius: 5px;
   padding: 0.2rem;
-  margin-left: 2em;
-  margin-top: -1rem;
+  margin-left: 1.2em;
+  margin-top: -.8rem;
 }
 
 .user-name {
-  display: none;
+  display: block;
 }
 
 .profile,
@@ -130,13 +130,14 @@ header {
   font-family: var(--other-font);
   font-size: 1.2rem;
   margin: 0 0 0 1rem;
+  padding: .1rem .2rem;
+
 
 }
 
 #profile-name:hover{
     background-color: var(--color-primary-white-500);
     border-radius: 5px;
-    padding: .1rem .2rem;
     color: var(--color-primary-blue-500);
     font-weight: normal;
 
