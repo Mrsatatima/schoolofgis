@@ -22,7 +22,7 @@ a {
 }
 
 html {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(240, 240, 240);
   --title-font: "Open sans", sans-serif;
   --other-font: "Roboto", sans-serif;
 
@@ -116,7 +116,7 @@ header {
 }
 
 .user-name {
-  display: block;
+  display: none;
 }
 
 .profile,

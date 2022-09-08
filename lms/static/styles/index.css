@@ -89,6 +89,26 @@
   animation-duration: 1.5s;
 }
 
+#section-main{
+display: grid;
+grid-template-columns: auto auto;
+gap: 10px 10px;
+}
+.section-1{
+  padding: 1rem;
+  background-color: var(--color-primary-white-500);
+  box-shadow: 4px 4px rgba(128, 0, 32, .2);
+  border-radius: 4px;
+  width: 600px;
+}
+.section-text{
+  display: flex;
+
+}
+.about-image{
+  width: 200px;
+  object-fit: cover;
+}
 @keyframes fade {
   from {
     opacity: 0.4;
