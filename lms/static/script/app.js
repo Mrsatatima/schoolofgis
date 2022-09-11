@@ -67,8 +67,7 @@ function moveToSlide(event) {
 showSlides();
 
 function hideCourseNav(){
-  console.log(indexList.length, indexList, groupIndexList)
-  if (indexList.length===0){
+  if (indexList.length===3){
     coursePreviousKey.style.display = "none";
   }else{
     coursePreviousKey.style.display = "block";
@@ -84,9 +83,7 @@ function hideCourseNav(){
 }
 
 function autocourseSlide() {
-  hideCourseNav()
   let dummyIndexList = []
-  console.log("run")
   for (let index = 0; index < courses.length; index++) {
     courses[index].style.display = "block";
     indexList.push(index)
@@ -97,7 +94,7 @@ function autocourseSlide() {
   }
   groupIndexList.push(dummyIndexList)
   console.log(indexList, 0, groupIndexList)
-
+  hideCourseNav()
 
 }
 
@@ -125,21 +122,18 @@ function courseSlide(event) {
   }
   else{
     let previousIndex = groupIndexList.length-2  
-    let activeIndex = groupIndexList.length-2  
+    let activeIndex = groupIndexList.length-1 
+
 
     for (let i = 0; i < groupIndexList[previousIndex].length; i++) {
       courses[groupIndexList[previousIndex][i]].style.display ="block"
-      indexList.pop(groupIndexList[previousIndex][i])
     }
-    for (let i = 0; i < groupIndexList[previousIndex].length; i++) {
+    for  (let i = 0; i < groupIndexList[activeIndex].length; i++)  {
       indexList.pop(groupIndexList[activeIndex][i])
+      console.log(indexList)
     }
-    if (groupIndexList.length !==1){
-      groupIndexList.pop(groupIndexList[previousIndex])
-      groupIndexList.pop(groupIndexList[activeIndex])
-
-
-    }
+    groupIndexList.pop(groupIndexList[activeIndex])
+    
 
   }
   
