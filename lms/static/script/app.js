@@ -88,7 +88,8 @@ function autocourseSlide() {
     courses[index].style.display = "block";
     indexList.push(index)
     dummyIndexList.push(index)
-    if(index ===2){
+    console.log(index %2)
+    if((index +1)%3===0){
       break
     }
   }
@@ -111,7 +112,7 @@ function courseSlide(event) {
         courses[idx].style.display = "block";
         indexList.push(idx)
         dummyIndexList.push(idx)
-        if(idx ===2){
+        if((idx +1)%3===0){
           break
         }
       }    
