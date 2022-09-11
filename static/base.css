@@ -1,4 +1,5 @@
 h1,
+h2,
 ul,
 ol,
 a,
@@ -8,7 +9,7 @@ p {
   padding: 0;
 }
 
-button {
+button, a{
   all: unset;
 }
 
@@ -33,9 +34,10 @@ html {
   --size-4: 2rem;
   --size-5: 2.5rem;
 
+  --color-primary-blue-100: rgb(250, 240, 231);
   --color-primary-blue-200: rgb(218, 160, 109);
-  --color-primary-blue-100: rgb(149, 69, 53);
-  --color-primary-blue-300: rgb(165, 42, 42);
+  --color-primary-blue-300: rgb(149, 69, 53);
+  --color-primary-blue-400: rgb(165, 42, 42);
   --color-primary-blue-500: rgb(128, 0, 32);
 
   --color-primary-white-500: rgb(255, 255, 255);
