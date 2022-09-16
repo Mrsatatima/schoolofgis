@@ -89,7 +89,7 @@
   grid-template-columns: auto auto;
   gap: 10px 10px;
 }
-.section-1 {
+.section-1{
   display: flex;
   background-color: var(--color-primary-white-500);
 }
@@ -108,10 +108,11 @@
   font-size: 3rem;
   font-weight: bold;
   color: var(--color-primary-blue-500);
+  width: 70%;
 }
 .section-p{
   font-family: var( --other-font);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
 }
 .section-button{
@@ -124,7 +125,7 @@
  font-size: 1rem;
  font-family: var(--other-font);
  font-weight: bold;
- transition: background-color 0.6s ease;
+ transition: background-color 2s linear;
  text-align: center;
  width: fit-content;
 }
@@ -134,45 +135,55 @@
 
 }
 .about-image {
-  width: 600px;
+  width: 40%;
   object-fit: cover;
 }
 
-.course-slide{
+.course-slide,
+.testimony-slide{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   justify-items: center;
   align-items: center;
-  margin: auto;
 }
 
 .next-course,
-.prev-course{
+.prev-course,
+.next-testimony,
+.prev-testimony{
   font-size: 3rem;
 }
 .next-course:hover,
-.prev-course:hover{
+.prev-course:hover,
+.next-testimony:hover,
+.prev-testimony:hover{
   color: var(--color-primary-blue-500);
 
 }
 
-
-.courses-group{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 1rem;
+.courses-group,
+.testimonies-group{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
 }
-.section-course{
+
+.section-course,
+.section-testimony{
   display: none;
-  width: 250px;
-  height: 400px;
+  width: 200px;
+  height:400px;
   border-radius: 10px;
   box-shadow: 4px 4px rgba(149, 69, 53, .2);
   background-color: var(--color-primary-white-500);
   overflow: hidden;
+  transition: border .2s;
+
 }
-.section-course:hover{
+.section-course:hover,
+.section-testimony:hover{
   border: solid 4px var(--color-primary-blue-500);
+  box-shadow:none
 }
 .section-course-img{
   display: block;
@@ -180,25 +191,49 @@
   height: 60%;
   object-fit: cover;
 }
+.section-testimony-img{
+  display: block;
+  width: 100px;
+  object-fit: cover;
+  margin: 1rem auto;
+}
+
 .section-2-text{
   padding: .5rem;
 
 }
-.section-course-title{
+.section-course-title,
+.section-testimony-title{
   font-family: var( --title-font);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--color-primary-blue-500)
 
 }
-.author{
+.author,
+.naration{
   font-family: var( --other-font);
-  font-size: 1rem;
+  font-size: .7rem;
   text-align: justify;
 
 }
 
+.software-section{
+  background-color: var(--color-primary-white-500);
+  padding: 1rem;
+}
 
+#softwares{
+  margin: 2rem auto 3rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  width: 90%;
 
+}
+
+.software-logo{
+  width:100px;
+}
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -251,30 +286,57 @@
   .about-image {
     width: 100%;
   }
-  .courses-group{
+  .section-course,
+  .section-testimony{
+    width: 250px;
+    height:300px;
+    
+  }
+  #softwares{
+    margin: 2rem auto 2rem auto;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr ;
-    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 1rem;
+    column-gap: 1rem;
+    align-items: center;
+  }
+  .software-logo{
+    width: 80px;
+  }
 
-  }
-  .section-course{
-    width: 150px;
-    height: 250px;
-    border-radius: 4px;
-  }
- 
-  .section-2-text{
-    padding: .5rem;
-  
-  }
-  .section-course-title{
-    font-size: .8rem;
-  
-  }
-  .author{
-    font-size: .5rem;
-  
-  }
+
+}
+
+
+@media screen and (max-width: 290px) {
+
+.section-course{
+  width: 150px;
+  height: 250px;
+  border-radius: 4px;
+}
+
+.section-2-text{
+  padding: .5rem;
+
+}
+.section-course-title{
+  font-size: .8rem;
+
+}
+.author,
+.naration{
+  font-size: .5rem;
+
+}
+#softwares{
+  margin: 2rem auto 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  align-items: center;
+}
 }

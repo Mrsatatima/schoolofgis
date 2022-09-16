@@ -1,14 +1,32 @@
 const previousKey = document.querySelector(".prev");
 const courseNextKey = document.querySelector(".next-course");
 const coursePreviousKey = document.querySelector(".prev-course");
+const testimonyNextKey = document.querySelector(".next-testimony");
+const testimonyPreviousKey = document.querySelector(".prev-testimony");
 const nextKey = document.querySelector(".next");
 const slides = document.getElementsByClassName("mySlides");
 const dots = document.getElementsByClassName("dot");
 const courses = document.getElementsByClassName("section-course");
+const testimonies = document.getElementsByClassName("section-testimony");
+console.log(testimonies)
+
 let indexList = []
+let indexList2 = []
 let groupIndexList = []
+let groupIndexList2 = []
+
 let slide = 1;
 let slide2 = 1;
+const window700 = window.matchMedia("(max-width: 700px)")
+const window1000 = window.matchMedia("(max-width: 1000px)")
+
+let displayCourse= 4
+if (window700.matches){
+  console.log(window700)
+  displayCourse= 1
+}else if (window1000.matches){
+   displayCourse = 3}
+
 
 function showSlides() {
   if (slide > slides.length) {
@@ -64,42 +82,64 @@ function moveToSlide(event) {
   slide2 = slide;
 }
 
-showSlides();
 
 function hideCourseNav(){
-  if (indexList.length===3){
-    coursePreviousKey.style.display = "none";
+  if (indexList.length===displayCourse){
+    coursePreviousKey.style.visibility = "hidden";
   }else{
-    coursePreviousKey.style.display = "block";
+    coursePreviousKey.style.visibility= "visible";
 
   }
   if (indexList.length===courses.length){
-    courseNextKey.style.display = "none";
+    courseNextKey.style.visibility = 'hidden';
 
   }else{
-    courseNextKey.style.display = "block";
+    courseNextKey.style.visibility= "visible";
+
+  }
+  if (indexList2.length===displayCourse){
+    testimonyPreviousKey.style.visibility = "hidden";
+  }else{
+    testimonyPreviousKey.style.visibility= "visible";
+
+  }
+  if (indexList2.length===testimonies.length){
+    testimonyNextKey.style.visibility = 'hidden';
+
+  }else{
+    testimonyNextKey.style.visibility= "visible";
 
   }
 }
 
-function autocourseSlide() {
+function autocourseSlide(event) {
   let dummyIndexList = []
+  let dummyIndexList2 =[]
   for (let index = 0; index < courses.length; index++) {
     courses[index].style.display = "block";
     indexList.push(index)
     dummyIndexList.push(index)
-    console.log(index %2)
-    if((index +1)%3===0){
+    console.log(displayCourse)
+    if((index +1)%displayCourse===0){
+      break
+    }
+  }
+  for (let index = 0; index < testimonies.length; index++) {
+    testimonies[index].style.display = "block"
+    indexList2.push(index)
+    dummyIndexList2.push(index)
+    console.log(displayCourse)
+    if((index +1)%displayCourse===0){
       break
     }
   }
   groupIndexList.push(dummyIndexList)
-  console.log(indexList, 0, groupIndexList)
+  groupIndexList2.push(dummyIndexList2)
   hideCourseNav()
-
 }
 
 function courseSlide(event) {
+
   for (let index = 0; index < courses.length; index++) {
     courses[index].style.display = "none";
     
@@ -112,7 +152,7 @@ function courseSlide(event) {
         courses[idx].style.display = "block";
         indexList.push(idx)
         dummyIndexList.push(idx)
-        if((idx +1)%3===0){
+        if((idx +1)%displayCourse===0){
           break
         }
       }    
@@ -141,6 +181,8 @@ function courseSlide(event) {
 hideCourseNav()
 
 }
+
+showSlides();
 
 autocourseSlide()
 previousKey.addEventListener("click", addSlide);
