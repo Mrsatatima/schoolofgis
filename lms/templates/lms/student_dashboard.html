@@ -1,0 +1,571 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_link %} 
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
+
+{% endblock  %}
+
+{% block  main %}
+    <main>
+        <div>
+            {% include "./includes/navigation.html" %}  
+        </div>
+        <div>
+            <h1>hello Ahmad!</h1>
+            <section id="main-section">
+                <div class="summary">
+                    <img
+                    src="{% static '/images/mortarboard.png' %}"
+                    alt="students summary"
+                    id="summary-icon1"
+                    />
+                    <div class="summary-text">
+                    <p class="summary-value">567</p>
+                    <h2 class="summary-title">students</h2>
+                    </div>
+                </div>
+                <div class="summary">
+                    <img
+                    src="{% static '/images/person.png' %}"
+                    alt="teachers summary"
+                    id="summary-icon2"
+                    />
+                    <div class="summary-text">
+                    <p class="summary-value">21</p>
+                    <h2 class="summary-title">teachers</h2>
+                    </div>
+                </div>
+                <div class="summary">
+                    <img
+                    src="{% static '/images/underperform.png' %}"
+                    alt="visitation summary"
+                    id="summary-icon3"
+                    />
+                    <div class="summary-text">
+                    <p class="summary-value">9% &#x2193;</p>
+                    <h2 class="summary-title">
+                        platform <br />
+                        visitation
+                    </h2>
+                    </div>
+                </div>
+                <div class="summary">
+                    <img src="{% static '/images/book.png' %}" alt="CBT summary" id="summary-icon4" />
+                    <div class="summary-text">
+                    <p class="summary-value">83%</p>
+                    <h2 class="summary-title">
+                        Finished <br />
+                        CBT Test
+                    </h2>
+                    </div>
+                </div>
+                <div id="student-enroll">
+                    <h3>The number of students per month vs previous year</h3>
+                    <canvas id="myChart1"></canvas>
+        
+                    <script>
+                    var xValues = [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December",
+                    ];
+                    var yValues = [50, 25, 44, 35, 15, 38, 50, 17, 45, 33, 46, 37];
+                    var yValues2 = [50, 10, 45, 33, 46, 37, 54, 49, 44, 24, 35, 50];
+        
+                    new Chart("myChart1", {
+                        type: "bar",
+                        data: {
+                        labels: xValues,
+        
+                        datasets: [
+                            {
+                            label: "This Year",
+                            backgroundColor: "orange",
+                            data: yValues,
+                            },
+                            {
+                            label: "last Year",
+                            backgroundColor: "purple",
+                            data: yValues2,
+                            },
+                        ],
+                        },
+                        options: {
+                        title: {
+                            display: false,
+                            text: "The number of students per month vs previous year",
+                            fontFamily: "Open Sans",
+                            fontColor: "rgb(100, 100, 100)",
+                            fontSize: 13,
+                        },
+        
+                        legend: {
+                            display: true,
+                            position: "bottom",
+                            labels: {
+                            fontColor: "rgb(100, 100, 100)",
+                            fontFamily: "Roboto",
+                            fontSize: 10,
+                            },
+                        },
+                        scales: {
+                            yAxes: [
+                            {
+                                ticks: {
+                                beginAtZero: true,
+                                fontColor: "rgb(100, 100, 100)",
+                                fontSize: "8",
+                                fontFamily: "Roboto",
+                                },
+                            },
+                            ],
+                            xAxes: [
+                            {
+                                ticks: {
+                                fontColor: "rgb(100, 100, 100)",
+                                fontSize: "10",
+                                fontFamily: "Roboto",
+                                },
+                            },
+                            ],
+                        },
+                        },
+                    });
+                    </script>
+                </div>
+                <div id="teacher-progress">
+                    <h3>Teachers Progress</h3>
+                    <ul>
+                    <li class="teacher">
+                        <div class="teacher-info">
+                        <img
+                            src="/images/Ellipse 96.png"
+                            alt="Bilal Babale"
+                            class="teacher-image"
+                        />
+                        <div class="teacher-title">
+                            <h4>Mathematics</h4>
+                            <a href="" class="teacher-name">
+                            <p>Bilal Babale</p>
+                            </a>
+                        </div>
+                        <div class="improvement">
+                            <p class="value">2%&#x2193;</p>
+                            <h2 class="title">Student improvement</h2>
+                        </div>
+                        <div class="topics">
+                            <p class="value">15</p>
+                            <h2 class="title">Topics Done</h2>
+                        </div>
+                        <div class="average">
+                            <p class="value">78%</p>
+                            <h2 class="title">Academic Average</h2>
+                        </div>
+                        </div>
+                        <div class="completion">
+                        <canvas id="myChart3"></canvas>
+                        <script>
+                            var xValues = ["Completed", "not done"];
+        
+                            var yValues = [45, 55];
+        
+                            new Chart("myChart3", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [
+                                {
+                                    label: "dtatat",
+                                    data: yValues,
+                                    backgroundColor: [
+                                    "rgb(8, 162, 242,.3)",
+                                    "rgb(150, 150, 150)",
+                                    ],
+                                },
+                                ],
+                            },
+                            options: {
+                                legend: {
+                                display: false,
+                                },
+                            },
+                            });
+                        </script>
+                        <p class="value">55%</p>
+                        <h2 class="title">Completed</h2>
+                        </div>
+                    </li>
+                    <li class="teacher">
+                        <div class="teacher-info">
+                        <img
+                            src="/images/Ellipse 100.png"
+                            alt="Bilal Babale"
+                            class="teacher-image"
+                        />
+                        <div class="teacher-title">
+                            <h4>Mathematics</h4>
+                            <a href="" class="teacher-name">
+                            <p>Umar  Aminu</p>
+                            </a>
+                        </div>
+                        <div class="improvement">
+                            <p class="value">2%&#x2193;</p>
+                            <h2 class="title">Student improvement</h2>
+                        </div>
+                        <div class="topics">
+                            <p class="value">15</p>
+                            <h2 class="title">Topics Done</h2>
+                        </div>
+                        <div class="average">
+                            <p class="value">78%</p>
+                            <h2 class="title">Academic Average</h2>
+                        </div>
+                        </div>
+                        <div class="completion">
+                        <canvas id="myChart4"></canvas>
+                        <script>
+                            var xValues = ["Completed", "not done"];
+        
+                            var yValues = [65, 35];
+        
+                            new Chart("myChart4", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [
+                                {
+                                    label: "dtatat",
+                                    data: yValues,
+                                    backgroundColor: [
+                                    "rgb(8, 162, 242,.3)",
+                                    "rgb(150, 150, 150)",
+                                    ],
+                                },
+                                ],
+                            },
+                            options: {
+                                legend: {
+                                display: false,
+                                },
+                            },
+                            });
+                        </script>
+                        <p class="value">65%</p>
+                        <h2 class="title">Completed</h2>
+                        </div>
+                    </li>
+                    <li class="teacher">
+                        <div class="teacher-info">
+                        <img
+                            src="/images/Ellipse 96(1).png"
+                            alt="Bilal Babale"
+                            class="teacher-image"
+                        />
+                        <div class="teacher-title">
+                            <h4>Biology</h4>
+                            <a href="" class="teacher-name">
+                            <p>Mary Popin</p>
+                            </a>
+                        </div>
+                        <div class="improvement">
+                            <p class="value">4%&#x2191;</p>
+                            <h2 class="title">Student improvement</h2>
+                        </div>
+                        <div class="topics">
+                            <p class="value">17</p>
+                            <h2 class="title">Topics Done</h2>
+                        </div>
+                        <div class="average">
+                            <p class="value">75%</p>
+                            <h2 class="title">Academic Average</h2>
+                        </div>
+                        </div>
+                        <div class="completion">
+                        <canvas id="myChart5"></canvas>
+                        <script>
+                            var xValues = ["Completed", "not done"];
+        
+                            var yValues = [75, 25];
+        
+                            new Chart("myChart5", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [
+                                {
+                                    label: "dtatat",
+                                    data: yValues,
+                                    backgroundColor: [
+                                    "rgb(8, 162, 242,.3)",
+                                    "rgb(150, 150, 150)",
+                                    ],
+                                },
+                                ],
+                            },
+                            options: {
+                                legend: {
+                                display: false,
+                                },
+                            },
+                            });
+                        </script>
+                        <p class="value">75%</p>
+                        <h2 class="title">Completed</h2>
+                        </div>
+                    </li>
+                    <li class="teacher">
+                        <div class="teacher-info">
+                        <img
+                            src="/images/Ellipse 99.png"
+                            alt="Bilal Babale"
+                            class="teacher-image"
+                        />
+                        <div class="teacher-title">
+                            <h4>Mathematics</h4>
+                            <a href="" class="teacher-name">
+                            <p>Sunday Mba</p>
+                            </a>
+                        </div>
+                        <div class="improvement">
+                            <p class="value">1%&#x2193;</p>
+                            <h2 class="title">Student improvement</h2>
+                        </div>
+                        <div class="topics">
+                            <p class="value">4</p>
+                            <h2 class="title">Topics Done</h2>
+                        </div>
+                        <div class="average">
+                            <p class="value">57%</p>
+                            <h2 class="title">Academic Average</h2>
+                        </div>
+                        </div>
+                        <div class="completion">
+                        <canvas id="myChart6"></canvas>
+                        <script>
+                            var xValues = ["Completed", "not done"];
+        
+                            var yValues = [25, 75];
+        
+                            new Chart("myChart6", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [
+                                {
+                                    label: "dtatat",
+                                    data: yValues,
+                                    backgroundColor: [
+                                    "rgb(8, 162, 242,.3)",
+                                    "rgb(150, 150, 150)",
+                                    ],
+                                },
+                                ],
+                            },
+                            options: {
+                                legend: {
+                                display: false,
+                                },
+                            },
+                            });
+                        </script>
+                        <p class="value">25%</p>
+                        <h2 class="title">Completed</h2>
+                        </div>
+                    </li>
+                    <li class="teacher">
+                        <div class="teacher-info">
+                        <img
+                            src="/images/author.jpeg"
+                            alt="Bilal Babale"
+                            class="teacher-image"
+                        />
+                        <div class="teacher-title">
+                            <h4>Mathematics</h4>
+                            <a href="" class="teacher-name">
+                            <p>Aminu Ahmad</p>
+                            </a>
+                        </div>
+                        <div class="improvement">
+                            <p class="value">10%&#x2191;</p>
+                            <h2 class="title">Student improvement</h2>
+                        </div>
+                        <div class="topics">
+                            <p class="value">1</p>
+                            <h2 class="title">Topics Done</h2>
+                        </div>
+                        <div class="average">
+                            <p class="value">88%</p>
+                            <h2 class="title">Academic Average</h2>
+                        </div>
+                        </div>
+                        <div class="completion">
+                        <canvas id="myChart7"></canvas>
+                        <script>
+                            var xValues = ["Completed", "not done"];
+        
+                            var yValues = [15, 85];
+        
+                            new Chart("myChart7", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [
+                                {
+                                    label: "dtatat",
+                                    data: yValues,
+                                    backgroundColor: [
+                                    "rgb(8, 162, 242,.3)",
+                                    "rgb(150, 150, 150)",
+                                    ],
+                                },
+                                ],
+                            },
+                            options: {
+                                legend: {
+                                display: false,
+                                },
+                            },
+                            });
+                        </script>
+                        <p class="value">15%</p>
+                        <h2 class="title">Completed</h2>
+                        </div>
+                    </li>
+                    <li class="teacher">
+                        <div class="teacher-info">
+                        <img
+                            src="/images/author.jpeg"
+                            alt="Bilal Babale"
+                            class="teacher-image"
+                        />
+                        <div class="teacher-title">
+                            <h4>Mathematics</h4>
+                            <a href="" class="teacher-name">
+                            <p>Aminu Ahmad</p>
+                            </a>
+                        </div>
+                        <div class="improvement">
+                            <p class="value">10%&#x2191;</p>
+                            <h2 class="title">Student improvement</h2>
+                        </div>
+                        <div class="topics">
+                            <p class="value">1</p>
+                            <h2 class="title">Topics Done</h2>
+                        </div>
+                        <div class="average">
+                            <p class="value">88%</p>
+                            <h2 class="title">Academic Average</h2>
+                        </div>
+                        </div>
+                        <div class="completion">
+                        <canvas id="myChart7"></canvas>
+                        <script>
+                            var xValues = ["Completed", "not done"];
+        
+                            var yValues = [15, 85];
+        
+                            new Chart("myChart7", {
+                            type: "doughnut",
+                            data: {
+                                labels: xValues,
+                                datasets: [
+                                {
+                                    label: "dtatat",
+                                    data: yValues,
+                                    backgroundColor: [
+                                    "rgb(8, 162, 242,.3)",
+                                    "rgb(150, 150, 150)",
+                                    ],
+                                },
+                                ],
+                            },
+                            options: {
+                                legend: {
+                                display: false,
+                                },
+                            },
+                            });
+                        </script>
+                        <p class="value">15%</p>
+                        <h2 class="title">Completed</h2>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+                <div class="average-performance">
+                    <h3>Average student performance per subject</h3>
+                    <canvas id="myChart2"></canvas>
+                    <script>
+                    var xValues = [
+                        "Mathematics",
+                        "Physics",
+                        "Chemistry",
+                        "Biology",
+                        "English",
+                        "Computer",
+                        "Economics",
+                        "Accounting",
+                    ];
+                    var yValues = [80, 97, 84, 85, 75, 73, 88, 99];
+        
+                    new Chart("myChart2", {
+                        type: "radar",
+                        data: {
+                        labels: xValues,
+                        datasets: [
+                            {
+                            backgroundColor: "rgba(8, 162, 242,.3)",
+                            data: yValues,
+                            },
+                        ],
+                        },
+                        options: {
+                        legend: { display: false },
+                        scale: {
+                            angleLines: {
+                            display: false,
+                            },
+                            ticks: {
+                            suggestedMin: 50,
+                            suggestedMax: 100,
+                            fontFamily: "Roboto",
+                            fontSize: 8,
+                            fontColor: "rgb(80, 80, 80)",
+                            },
+                            pointLabels: {
+                            fontFamily: "Roboto",
+                            fontSize: 12,
+                            fontColor: "rgb(8, 162, 242)",
+                            },
+                        },
+                        title: {
+                            display: false,
+                            text: "Average student performance per subject",
+                            fontFamily: "Roboto",
+                            fontSize: 14,
+                            fontColor: "rgb(80, 80, 80)",
+                        },
+                        },
+                    });
+                    </script>
+                </div>
+                <div class="average-performance1">
+                    <h3>Average student score all subject</h3>
+                    <span></span>
+                    <p>85% <br /><span>score</span></p>
+                </div>
+            </section>
+        </div>
+       
+    </main>
+{% endblock  %}

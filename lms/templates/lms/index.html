@@ -1,188 +1,222 @@
+{% extends 'base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-    />
+
+    {% block css_link %}
     <link rel="stylesheet" href="{% static 'base.css' %}">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <script  defer= aysnc src="{% static 'script/app.js' %}"></script>
-</head>
-<body>
-    <header>
-        <div id="header-container">
-            <a href={% url 'index' %} id ="logo">
-                <img src={% static '/images/sog logo white.png' %} alt="" id="logo-image">
-                <p id="logo-name">School of GIS</p>
-            </a>
-            <div id="profile">
-                <a href="" id="user-group" >
-                   <div class="profile">
-                    <img src={% static "/images/profile.png" %} alt="profile pic" id="profile-pic" />
-                    <span class="notification"></span>
-                   </div>
-                    <p class="user-name"> Abdullahi</p>
-                  </a>
-                  <a href="">
-                    <p id="profile-name">login</p>
-                  </a>
-            </div>
-        </div>
-       
-    </header>
-    <main>
-        <section >
-            <div class="slideshow-container">
-        
-                <div class="mySlides fade">
-                  <div>
-                    <div class="numbertext">1 / 3</div>
-                    <img src= "{% static 'images/images.jpeg' %} "style="width:100%">
-                  </div>
-                  <div class="text">I just want to get across that negative margins are perfectly valid CSS and should not be viewed as a "dirty hack". Negative margins are mentioned in the W3C box model specification. </div>
-                </div>
-                
-                <div class="mySlides fade">
-                  <div>
-                    <div class="numbertext">2 / 3</div>
-                    <img src= "{% static 'images/images2.jpg' %} "style="width:100%">
-                  </div>
-                  <div class="text">Caption Two</div>
-                </div>
-                
-                <div class="mySlides fade">
-                  <div>
-                    <div class="numbertext">3 / 3</div>
-                    <img src= "{% static 'images/images 3.jpeg' %} "style="width:100%">
-                  </div>
-                  <div class="text">Caption Three</div>
-                </div>
-                
-                <button value="-1"  class="prev" >❮</button>
-                <button value="1" class="next" >❯</button>
-                
-            </div>
-            <div style="text-align:center">
-                <button class="dot" value="1"></button> 
-                <button class="dot" value="2"></button> 
-                <button class="dot" value="3"></button> 
-            </div>
-        </section>
-        <section id="section-main">
-            <div class="section-1">
-                <div class="section-text">
-                    <h1 class="section-header">About us</h1>
-                    <p class="section-p">Start, switch, or advance your career with more than 5,000 courses, 
-                        Professional Certificates, and degrees from world-class universities and companies.
-                        Start, switch, or advance your career with more than 5,000 courses, 
-                        Professional Certificates, and degrees from world-class universities and companies</p>
-                     <a href="" class="section-button">More &#x2192</a>   
-                </div>
-                <img src="{% static '/images/images.jpeg' %}" alt="" class="about-image">
-            </div>
-        </section>
-        <section class="section-2">
-            <h1 class="section-header">Courses</h1>
-            <div class='course-slide'>
-                <button value="-prev"  class="prev-course" >❮</button>
-                <div class="courses-group">
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
-                    <a href="" class="section-course">
-                        <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
-                        <div class="section-2-text">
-                            <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
-                            <p class="author">Alamin Ahmad Abbas</p>
-                        </div>
-                    </a>
+    {% endblock  %}
+    {% block title %}
+    Home
+    {% endblock  %}
+   
+
+   {% block  main %}
+        <main>
+            <section >
+                <div class="slideshow-container">
+            
+                    <div class="mySlides fade">
+                    <div>
+                        <div class="numbertext">1 / 3</div>
+                        <img src= "{% static 'images/images.jpeg' %} "style="width:100%">
+                    </div>
+                    <div class="text">I just want to get across that negative margins are perfectly valid CSS and should not be viewed as a "dirty hack". Negative margins are mentioned in the W3C box model specification. </div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                    <div>
+                        <div class="numbertext">2 / 3</div>
+                        <img src= "{% static 'images/images2.jpg' %} "style="width:100%">
+                    </div>
+                    <div class="text">Caption Two</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                    <div>
+                        <div class="numbertext">3 / 3</div>
+                        <img src= "{% static 'images/images 3.jpeg' %} "style="width:100%">
+                    </div>
+                    <div class="text">Caption Three</div>
+                    </div>
+                    
+                    <button value="-1"  class="prev" >❮</button>
+                    <button value="1" class="next" >❯</button>
                     
                 </div>
-                <button value="next" class="next-course" >❯</button>
-            </div>
-            <a href="" class="section-button">More &#x2192</a>   
-        </section>
-        <section class="software-section">
-            <h1 class="section-header">Learn how to use GIS softwares</h1>
-            <p class="section-p"></p>
-            <div id="softwares">
-                <img src="{% static '/images/python logo.png' %}" alt="" class="software-logo">
-                <img src="{% static '/images/arcgispro logo.png' %}" alt="" class="software-logo">
-                <img src="{% static '/images/ilwis logo.png' %}" alt="" class="software-logo">
-                <img src="{% static '/images/arcgis logo.png' %}" alt="" class="software-logo">
-                <img src="{% static '/images/envi logo.png' %}" alt="" class="software-logo">
-                <img src="{% static '/images/qgis logo.png' %}" alt="" class="software-logo">
-            </div>
-        </section>
-        <section class="section-2">
-            <h1 class="section-header">Testimonies</h1>
-            <div class='testimony-slide'>
-                <button value="-prev"  class="prev-testimony" >❮</button>
-                <div class="testimonies-group">
-                    <div class="section-testimony">
-                        <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
-                        <div class="section-2-text">
-                            <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
-                            <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
-                        </div>
-                    </div>
+                <div style="text-align:center">
+                    <button class="dot" value="1"></button> 
+                    <button class="dot" value="2"></button> 
+                    <button class="dot" value="3"></button> 
                 </div>
-                <button value="next" class="next-testimony" >❯</button>
-            </div>
-            <a href="" class="section-button">More &#x2192</a>   
-        </section>
+            </section>
+            <section id="section-main">
+                <div class="section-1">
+                    <div class="section-text">
+                        <h1 class="section-header">About us</h1>
+                        <p class="section-p">Start, switch, or advance your career with more than 5,000 courses, 
+                            Professional Certificates, and degrees from world-class universities and companies.
+                            Start, switch, or advance your career with more than 5,000 courses, 
+                            Professional Certificates, and degrees from world-class universities and companies</p>
+                        <a href="" class="section-button">More &#x2192</a>   
+                    </div>
+                    <img src="{% static '/images/images.jpeg' %}" alt="" class="about-image">
+                </div>
+            </section>
+            <section class="section-2">
+                <h1 class="section-header">Courses</h1>
+                <div class='course-slide'>
+                    <button value="-prev"  class="prev-course" >❮</button>
+                    <div class="courses-group">
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        <a href="" class="section-course">
+                            <img src="{% static '/images/images2.jpg' %}" alt="" class="section-course-img">
+                            <div class="section-2-text">
+                                <h2  class="section-course-title">Introduction to GIS for microplanning</h2>
+                                <p class="author">Alamin Ahmad Abbas</p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <button value="next" class="next-course" >❯</button>
+                </div>
+                <a href="" class="section-button">More &#x2192</a>   
+            </section>
+            <section class="software-section">
+                <h1 class="section-header">Learn how to use GIS softwares</h1>
+                <p class="section-p"></p>
+                <div id="softwares">
+                    <img src="{% static '/images/python logo.png' %}" alt="" class="software-logo">
+                    <img src="{% static '/images/arcgispro logo.png' %}" alt="" class="software-logo">
+                    <img src="{% static '/images/ilwis logo.png' %}" alt="" class="software-logo">
+                    <img src="{% static '/images/arcgis logo.png' %}" alt="" class="software-logo">
+                    <img src="{% static '/images/envi logo.png' %}" alt="" class="software-logo">
+                    <img src="{% static '/images/qgis logo.png' %}" alt="" class="software-logo">
+                </div>
+            </section>
+            <section class="section-2">
+                <h1 class="section-header">Testimonies</h1>
+                <div class='testimony-slide'>
+                    <button value="-prev"  class="prev-testimony" >❮</button>
+                    <div class="testimonies-group">
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
+                        <div class="section-testimony">
+                            <img src="{% static '/images/author.jpeg' %}" alt="" class="section-testimony-img">
+                            <div class="section-2-text">
+                                <h2  class="section-testimony-title">Al-amin Ahmad Abbas</h2>
+                                <p class="naration">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
+                            </div>
+                        </div>
 
-       
-    </main>
+                    </div>
+                    <button value="next" class="next-testimony" >❯</button>
+                </div>
+                <a href="" class="section-button">More &#x2192</a>   
+            </section>
+        </main>
+   {% endblock  %}
     
-</body>
-</html>

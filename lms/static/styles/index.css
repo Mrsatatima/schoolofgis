@@ -196,6 +196,7 @@
   width: 100px;
   object-fit: cover;
   margin: 1rem auto;
+  border-radius: 100px;
 }
 
 .section-2-text{
@@ -244,6 +245,17 @@
 }
 
 /* On smaller screens, decrease text size */
+@media only screen and (min-width: 1200px) {
+
+  .section-course,
+  .section-testimony{
+    width: 280px;
+    
+  }
+
+
+}
+
 @media only screen and (max-width: 700px) {
   .slideshow-container {
     height: 200px;
@@ -311,9 +323,10 @@
 
 @media screen and (max-width: 290px) {
 
-.section-course{
+.section-course,
+.section-testimony{
   width: 150px;
-  height: 250px;
+  height: 300px;
   border-radius: 4px;
 }
 
@@ -321,7 +334,8 @@
   padding: .5rem;
 
 }
-.section-course-title{
+.section-course-title,
+.section-testimony-title{
   font-size: .8rem;
 
 }

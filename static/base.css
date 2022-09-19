@@ -34,11 +34,12 @@ html {
   --size-4: 2rem;
   --size-5: 2.5rem;
 
-  --color-primary-blue-100: rgb(250, 240, 231);
-  --color-primary-blue-200: rgb(218, 160, 109);
-  --color-primary-blue-300: rgb(149, 69, 53);
-  --color-primary-blue-400: rgb(165, 42, 42);
-  --color-primary-blue-500: rgb(128, 0, 32);
+
+  --color-primary-blue-100: rgb(179, 223, 253);
+  --color-primary-blue-200: rgb(8, 162, 242);
+  --color-primary-blue-300: rgb(47, 128, 237);
+  --color-primary-blue-400: rgb(16, 71, 143);
+  --color-primary-blue-500: rgb(3, 61, 99);
 
   --color-primary-white-500: rgb(255, 255, 255);
   --color-primary-white-400: rgb(240, 240, 240);
@@ -61,6 +62,7 @@ main,
   width:95%;
   margin:auto;
 }
+
 #header-container{
   display: flex;
   justify-content: space-between;
@@ -146,6 +148,57 @@ header {
 }
 
 
+footer{
+  background-color: var(--color-primary-blue-500);
+  padding: 1rem;
+}
+
+
+footer #logo{
+margin: 0 auto;
+width: 20rem;
+margin-bottom: 1rem;
+}
+
+#footer-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:20rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.footer-link{
+  color: var(--color-primary-white-500);
+}
+#social-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem .5rem;
+  border-top: solid 2px var(--color-primary-white-400);
+}
+
+.social-link img{
+  width: 30px;
+  color: var(--color-primary-blue-400);
+}
+
+#copyright{
+  display: flex;
+  justify-content: space-between;
+  width:14rem ;
+  margin: 0 auto;
+}
+
+
+#copyright p,
+#copyright a{
+  font-size: .8rem;
+  color: var(--color-primary-white-500);
+}
+
 @media screen and (max-width: 700px) {
     header {
         padding-top: .2rem;
@@ -180,4 +233,19 @@ header {
 .user-name-logged {
   margin-right: .2rem;
 }
+footer #logo{
+  width: fit-content;
+  }
+  #social-links{
+    margin-left:auto ;
+    margin-right: auto;
+  }
+  
 }
+
+@media screen and (max-width: 700px) {
+  #footer-links{
+    width:15rem;
+  }
+}
+

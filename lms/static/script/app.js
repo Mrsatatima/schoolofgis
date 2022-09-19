@@ -15,17 +15,21 @@ let indexList2 = []
 let groupIndexList = []
 let groupIndexList2 = []
 
+
 let slide = 1;
 let slide2 = 1;
 const window700 = window.matchMedia("(max-width: 700px)")
-const window1000 = window.matchMedia("(max-width: 1000px)")
+const window950 = window.matchMedia("(max-width: 950px)")
 
-let displayCourse= 4
+let displayCourse
 if (window700.matches){
-  console.log(window700)
   displayCourse= 1
-}else if (window1000.matches){
-   displayCourse = 3}
+}else if (window950.matches){
+   displayCourse = 3
+  
+  }else{
+    displayCourse = 4
+  }
 
 
 function showSlides() {
@@ -139,18 +143,31 @@ function autocourseSlide(event) {
 }
 
 function courseSlide(event) {
+  let slideGroup
+  let itemlist
+  let groupItemList
+  if (event.target.classList.contains('next-testimony')||event.target.classList.contains('prev-testimony')){
+    slideGroup = testimonies
+    itemlist = indexList2
+    groupItemList = groupIndexList2
 
-  for (let index = 0; index < courses.length; index++) {
-    courses[index].style.display = "none";
+  }else{
+    slideGroup = courses
+    itemlist = indexList
+    groupItemList = groupIndexList
+  }
+
+  for (let index = 0; index < slideGroup.length; index++) {
+    slideGroup[index].style.display = "none";
     
   }
  
   let dummyIndexList = []
   if (event.target.value ==="next"){
-    for (let idx = 0; idx < courses.length; idx++) {
-      if (!indexList.includes(idx)){
-        courses[idx].style.display = "block";
-        indexList.push(idx)
+    for (let idx = 0; idx < slideGroup.length; idx++) {
+      if (!itemlist.includes(idx)){
+        slideGroup[idx].style.display = "block";
+        itemlist.push(idx)
         dummyIndexList.push(idx)
         if((idx +1)%displayCourse===0){
           break
@@ -158,22 +175,25 @@ function courseSlide(event) {
       }    
     }
     
-    groupIndexList.push(dummyIndexList)
+    groupItemList.push(dummyIndexList)
+    console.log(groupItemList)
+    console.log(itemlist)
+
+
 
   }
   else{
-    let previousIndex = groupIndexList.length-2  
-    let activeIndex = groupIndexList.length-1 
+    let previousIndex = groupItemList.length-2  
+    let activeIndex = groupItemList.length-1 
 
 
-    for (let i = 0; i < groupIndexList[previousIndex].length; i++) {
-      courses[groupIndexList[previousIndex][i]].style.display ="block"
+    for (let i = 0; i < groupItemList[previousIndex].length; i++) {
+      slideGroup[groupItemList[previousIndex][i]].style.display ="block"
     }
-    for  (let i = 0; i < groupIndexList[activeIndex].length; i++)  {
-      indexList.pop(groupIndexList[activeIndex][i])
-      console.log(indexList)
+    for  (let i = 0; i < groupItemList[activeIndex].length; i++)  {
+      itemlist.pop(groupItemList[activeIndex][i])
     }
-    groupIndexList.pop(groupIndexList[activeIndex])
+    groupItemList.pop(groupItemList[activeIndex])
     
 
   }
@@ -189,6 +209,8 @@ previousKey.addEventListener("click", addSlide);
 nextKey.addEventListener("click", addSlide);
 courseNextKey.addEventListener("click", courseSlide);
 coursePreviousKey.addEventListener("click", courseSlide);
+testimonyNextKey.addEventListener("click", courseSlide);
+testimonyPreviousKey.addEventListener("click", courseSlide);
 
 for (let index = 0; index < dots.length; index++) {
   dots[index].addEventListener("click", moveToSlide);
