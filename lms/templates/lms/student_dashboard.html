@@ -1,19 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block css_link %} 
-    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
     <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    <script  defer src="{% static 'script/dashboard.js' %}"></script>
 
 {% endblock  %}
-
+{% block  navigation%}
+{% include "./includes/bottom_nav.html" %}
+{% endblock  %}
 {% block  main %}
     <main>
         <div>
-            {% include "./includes/navigation.html" %}  
+            {% include "./includes/side_nav.html" %}
         </div>
         <div>
             <h1>hello Ahmad!</h1>
             <section id="main-section">
+                
                 <div class="summary">
                     <img
                     src="{% static '/images/mortarboard.png' %}"

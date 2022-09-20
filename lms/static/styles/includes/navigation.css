@@ -2,46 +2,87 @@
   display: flex;
   flex-direction: column;
   background-color: var(--color-primary-blue-300);
-  width: 100%;
   height: 100%;
+  width: 12rem;
+  overflow: hidden;
+  transition: width ease-out 2s;
+}
+#side.active{
+  width: 7rem;
+  transition: width ease-in 2s;
 }
 #side nav {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-#logo2 {
-  width: 129px;
-  margin: 3rem auto;
+#hamburger{
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  margin: 2rem auto;
+  transition: transform ease 2s;
+  transform: rotate(-360deg);
 }
+#hamburger.active{
+transition: transform ease 2s;
+
+transform: rotate(360deg);
+}
+
+.dash{
+  padding: 2px;
+  margin: .3rem;
+  background-color: var(--color-primary-white-500);
+}
+
+
+
 #side-drawer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0.5rem 0;
-  margin: 0 auto;
+  padding: 0.5rem .2rem;
 }
 .side-btn {
   margin-bottom: 2rem;
+  margin-left: 0;
 }
-.side-btn-text {
+.side-btn-text  {
   text-decoration: none;
   color: var(--color-primary-white-400);
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: var(--size-2);
   padding: 0.5rem;
 }
+
+
 .side-btn:nth-of-type(1) .side-btn-text {
   color: var(--color-primary-white-500);
   font-weight: bold;
   border-left: solid 2px var(--color-primary-blue-500);
 }
 
-.side-btn-text svg {
+.nav-text{
+  display: block;
+  font-size: var(--size-2);
+  transition: display ease 2s;
+}
+.nav-text.active{
+  display: none;
+  transition: display ease 2s;
+}
+
+.nav-img{
   width: 20px;
   margin-right: 0.5rem;
+  transition: width ease 2s;
+}
+.nav-img.active{
+  width: 40px;
+  transition: width ease 2s;
+  margin: auto;
 }
 .side-btn-text:hover {
   background-color: var(--color-primary-white-500);
@@ -114,4 +155,5 @@
   .profile {
     padding: 0.5rem;
   }
+  
 }

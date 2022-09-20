@@ -1,242 +1,237 @@
-main{
-    display: flex;
-    width: 100%;
-    max-width: 1400px;
-    justify-content: space-between;
+main {
+  display: flex;
+  max-width: 1400px;
+  justify-content: space-between;
 }
 main h1 {
-    font-size: var(--size-3);
-    font-family: var(--title-font);
-    text-transform: capitalize;
-    color: var(--color-primary-blue-300);
-    font-weight: 900;
-    margin: 1.5rem 0;
-  }
-  #main-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 1.5rem;
-    row-gap: 1rem;
-    margin-bottom: 5rem;
-  }
-  
-  #main-section > div {
-    background-color: var(--color-primary-white-500);
-    width: 100%;
-    height: 11rem;
-    border-radius: 6px;
-    box-shadow: 2px 2px 4px rgba(58, 58, 5, 0.2);
-  }
-  #main-section > div:nth-of-type(5) {
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-    height: 25rem;
-  }
-  #main-section > div:nth-of-type(6) {
-    grid-column: 1 / 3;
-    grid-row: 5 / 8;
-    height: 38rem;
-  }
-  #main-section > div:nth-of-type(7) {
-    grid-column: 1 / 3;
-    grid-row: 8 / 10;
-    height: 25rem;
-  }
-  #main-section > div:nth-of-type(8) {
-    grid-column: 1 / 3;
-    height: 12rem;
-  }
-  .summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .summary img {
-    width: 20px;
-    background-color: var(--color-primary-white-400);
-    padding: 0.5rem;
-    border-radius: 20px;
-    margin-right: 0.5rem;
-  }
-  .summary-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .summary-title {
-    font-size: var(--size-2);
-    margin: 0;
-    text-transform: capitalize;
-    color: var(--color-primary-black-300);
-    text-align: center;
-  }
-  
-  .summary-value {
-    font-size: var(--size-2);
-    margin-bottom: 0.5rem;
-    text-transform: capitalize;
-    color: var(--color-primary-black-300);
-  }
-  
-  #summary-icon1 {
-    background-color: rgba(36, 36, 78, 0.2);
-  }
-  #summary-icon2 {
-    background-color: rgba(47, 128, 237, 0.2);
-  }
-  #summary-icon3 {
-    background-color: rgba(251, 4, 58, 0.2);
-  }
-  #summary-icon4 {
-    background-color: rgba(8, 162, 242, 0.2);
-  }
-  
-  #student-enroll {
-    align-items: center;
-    /* padding: .5rem; */
-  }
-  
-  #myChart1 {
-    width: 90% !important;
-    height: 350px !important;
-    margin: auto;
-  }
-  #myChart2 {
-    height: 15rem!important;
-    width:  90% !important;
-    margin: auto;
-  }
-  
-  .average-performance1 {
-    text-align: center;
-  }
-  .average-performance1 p {
-    background-color: rgb(253, 140, 3);
-    width: 8rem;
-    margin: -8.6rem auto 0 auto;
-    text-align: center;
-    padding: 2.3rem 0;
-    border-radius: 80px;
-    font-size: var(--size-3);
-    color: var(--color-primary-white-500);
-  }
-  .average-performance1 p span {
-    font-size: var(--size-2);
-    margin: 0;
-  }
-  h3 {
-    font-size: var(--size-2);
-    margin: 0.5rem auto 0.5rem auto;
-    color: var(--color-primary-black-300);
-    width: 20rem;
-    text-align: center;
-  }
-  .average-performance1 > span {
-    display: block;
-    width: 8.5rem;
-    height: 8.5rem;
-    background-color: white;
-    border-radius: 80px;
-    border: solid 3px rgb(253, 140, 3);
-    margin: auto;
-  }
-  
-  
-  #teacher-progress h3 {
-    margin: 0.5rem auto;
-    width: 60%;
-    text-align: center;
-  }
-  #teacher-progress li {
-    margin: auto;
-    margin-bottom: 0.6rem;
-  }
-  /* #teacher-progress li>div {
+  font-size: var(--size-3);
+  font-family: var(--title-font);
+  text-transform: capitalize;
+  color: var(--color-primary-blue-300);
+  font-weight: 900;
+  margin: 1.5rem 0;
+}
+#main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+#main-section > div {
+  background-color: var(--color-primary-white-500);
+  width: 100%;
+  height: 11rem;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(58, 58, 5, 0.2);
+}
+#main-section > div:nth-of-type(5) {
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+  height: 25rem;
+}
+#main-section > div:nth-of-type(6) {
+  grid-column: 1 / 3;
+  grid-row: 5 / 8;
+  height: 38rem;
+}
+#main-section > div:nth-of-type(7) {
+  grid-column: 1 / 3;
+  grid-row: 8 / 10;
+  height: 25rem;
+}
+#main-section > div:nth-of-type(8) {
+  grid-column: 1 / 3;
+  height: 12rem;
+}
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary img {
+  width: 20px;
+  background-color: var(--color-primary-white-400);
+  padding: 0.5rem;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+.summary-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-title {
+  font-size: var(--size-2);
+  margin: 0;
+  text-transform: capitalize;
+  color: var(--color-primary-black-300);
+  text-align: center;
+}
+
+.summary-value {
+  font-size: var(--size-2);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  color: var(--color-primary-black-300);
+}
+
+#summary-icon1 {
+  background-color: rgba(36, 36, 78, 0.2);
+}
+#summary-icon2 {
+  background-color: rgba(47, 128, 237, 0.2);
+}
+#summary-icon3 {
+  background-color: rgba(251, 4, 58, 0.2);
+}
+#summary-icon4 {
+  background-color: rgba(8, 162, 242, 0.2);
+}
+
+#student-enroll {
+  align-items: center;
+  /* padding: .5rem; */
+}
+
+#myChart1 {
+  width: 90% !important;
+  height: 350px !important;
+  margin: auto;
+}
+#myChart2 {
+  height: 15rem !important;
+  width: 90% !important;
+  margin: auto;
+}
+
+.average-performance1 {
+  text-align: center;
+}
+.average-performance1 p {
+  background-color: rgb(253, 140, 3);
+  width: 8rem;
+  margin: -8.6rem auto 0 auto;
+  text-align: center;
+  padding: 2.3rem 0;
+  border-radius: 80px;
+  font-size: var(--size-3);
+  color: var(--color-primary-white-500);
+}
+.average-performance1 p span {
+  font-size: var(--size-2);
+  margin: 0;
+}
+h3 {
+  font-size: var(--size-2);
+  margin: 0.5rem auto 0.5rem auto;
+  color: var(--color-primary-black-300);
+  width: 20rem;
+  text-align: center;
+}
+.average-performance1 > span {
+  display: block;
+  width: 8.5rem;
+  height: 8.5rem;
+  background-color: white;
+  border-radius: 80px;
+  border: solid 3px rgb(253, 140, 3);
+  margin: auto;
+}
+
+#teacher-progress h3 {
+  margin: 0.5rem auto;
+  width: 60%;
+  text-align: center;
+}
+#teacher-progress li {
+  margin: auto;
+  margin-bottom: 0.6rem;
+}
+/* #teacher-progress li>div {
     display: flex;
     flex-direction: column;
     align-items: center;
   } */
-  .teacher-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex: 80%;
-  }
-  .teacher {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    height: 5rem;
-    margin: 0 auto;
-    background-color: var(--color-primary-white-500);
-    box-shadow: 2px 2px 4px rgba(8, 162, 242, 0.2);
-    border-radius: 4px;
-  }
-  
-  
-  .teacher img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0;
-  }
-  .teacher-title h4 {
-    color: var(--color-primary-white-500);
-    background-color: var(--color-primary-blue-300);
-    padding: 0.2rem 0.3rem;
-    font-size: var(--size-0);
-    border-radius: 4px;
-    margin: 0;
-  }
-  .teacher-title p {
-    color: var(--color-primary-black-300);
-    padding: 0.2rem 0.3rem;
-    font-size: var(--size-0);
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .title {
-    color: var(--color-primary-black-300);
-    font-size: var(--size-0);
-    margin: 0;
-    text-align: center;
-    font-weight: 400;
-    width: 3rem;
-  }
-  .value {
-    color: var(--color-primary-black-300);
-    font-size: var(--size-1);
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0.6rem;
-  }
-  .completion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .completion p {
-    margin-top: -2rem;
-  }
-  .completion h2 {
-    margin-top: 0.6rem;
-  }
-  #teacher-progress canvas {
-    height: 90% !important;
-    width: 6rem !important;
-    margin:0;
-    margin-top: -1rem;
-  }
-  
-  
-  @media screen and (min-width:800px) {
-  
-    #main-section {
+.teacher-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 80%;
+}
+.teacher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 5rem;
+  margin: 0 auto;
+  background-color: var(--color-primary-white-500);
+  box-shadow: 2px 2px 4px rgba(8, 162, 242, 0.2);
+  border-radius: 4px;
+}
+
+.teacher img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+}
+.teacher-title h4 {
+  color: var(--color-primary-white-500);
+  background-color: var(--color-primary-blue-300);
+  padding: 0.2rem 0.3rem;
+  font-size: var(--size-0);
+  border-radius: 4px;
+  margin: 0;
+}
+.teacher-title p {
+  color: var(--color-primary-black-300);
+  padding: 0.2rem 0.3rem;
+  font-size: var(--size-0);
+  font-weight: bold;
+  margin: 0;
+}
+
+.title {
+  color: var(--color-primary-black-300);
+  font-size: var(--size-0);
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  width: 3rem;
+}
+.value {
+  color: var(--color-primary-black-300);
+  font-size: var(--size-1);
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+.completion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.completion p {
+  margin-top: -2rem;
+}
+.completion h2 {
+  margin-top: 0.6rem;
+}
+#teacher-progress canvas {
+  height: 90% !important;
+  width: 6rem !important;
+  margin: 0;
+  margin-top: -1rem;
+}
+
+@media screen and (min-width: 800px) {
+  #main-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -244,7 +239,7 @@ main h1 {
     row-gap: 1rem;
     margin-bottom: 5rem;
   }
-  
+
   #main-section > div:nth-of-type(5) {
     grid-column: 1 / 3;
     grid-row: 2 / 4;
@@ -265,23 +260,35 @@ main h1 {
   }
   #myChart2 {
     height: 15rem !important;
-    width:  90% !important;
+    width: 90% !important;
     margin: auto;
   }
+}
+
+@media screen and (min-width: 1090px) {
+  main{
+  width: 100%;
+
   }
-  
-  @media screen and (min-width:1090px) {
-  
-    main h1 {
-      width: 90%;
-      margin:  1.5rem auto;
-    }
-    #main-section {
-      width: 90%;
-      margin: 0 auto 5rem auto;
-    }
-   }
-  
-   
-  
-  
+  main h1 {
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+
+  #main-section {
+    width: 80%;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  main {
+    display: block;
+  }
+  footer{
+    margin-bottom: 3rem;
+  }
+  #main-section {
+    margin-bottom: 1.5rem;
+  }
+}
