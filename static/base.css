@@ -70,8 +70,11 @@ main,
 
 }
 header {
+  width: 100%;
+  max-width: 1400px;
   padding: .5rem 0rem;
   background-color: var(--color-primary-blue-500);
+  margin:auto;
 }
 
 #logo {
@@ -150,7 +153,10 @@ header {
 
 footer{
   background-color: var(--color-primary-blue-500);
-  padding: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
 }
 
 
@@ -178,11 +184,15 @@ margin-bottom: 1rem;
   justify-content: space-around;
   padding: 1rem .5rem;
   border-top: solid 2px var(--color-primary-white-400);
+  width: 80%;
+  margin-left:auto ;
+  margin-right: auto;
 }
 
 .social-link img{
   width: 30px;
   color: var(--color-primary-blue-400);
+  
 }
 
 #copyright{
@@ -236,10 +246,7 @@ margin-bottom: 1rem;
 footer #logo{
   width: fit-content;
   }
-  #social-links{
-    margin-left:auto ;
-    margin-right: auto;
-  }
+  
   
 }
 
