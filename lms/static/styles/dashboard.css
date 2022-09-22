@@ -53,9 +53,9 @@ main h1 {
 }
 .summary img {
   width: 20px;
-  background-color: var(--color-primary-white-400);
-  padding: 0.5rem;
   border-radius: 20px;
+  background-color: var(--color-primary-white-400);
+  padding: 1rem;
   margin-right: 0.5rem;
 }
 .summary-text {
