@@ -85,8 +85,7 @@ transform: rotate(360deg);
   margin: auto;
 }
 .side-btn-text:hover {
-  background-color: var(--color-primary-white-500);
-  color: var(--color-primary-blue-300);
+  background-color: var(--color-primary-blue-400);
   border-radius: 4px;
 }
 .side-btn:nth-of-type(1) .side-btn-text:hover {

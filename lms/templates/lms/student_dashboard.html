@@ -4,23 +4,25 @@
     <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
     <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
     <script  defer src="{% static 'script/dashboard.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {% endblock  %}
+{% block title %}Dashboard{% endblock  %}
 {% block  navigation%}
 {% include "./includes/bottom_nav.html" %}
 {% endblock  %}
 {% block  main %}
     <main>
-        <div>
+        <div id='side-navigation'>
             {% include "./includes/side_nav.html" %}
         </div>
-        <div>
+        <div id="contents">
             <h1>hello Ahmad!</h1>
             <section id="main-section">
                 
                 <div class="summary">
                     <img
-                    src= "{% static '/images/courses-dark.png' %}"
+                    src= "{% static '/images/course-mobile.png' %}"
                     alt="students summary"
                     id="summary-icon1"
                     />
@@ -31,13 +33,13 @@
                 </div>
                 <div class="summary">
                     <img
-                    src="{% static '/images/person.png' %}"
+                    src="{% static '/images/book.png' %}"
                     alt="teachers summary"
                     id="summary-icon2"
                     />
                     <div class="summary-text">
                     <p class="summary-value">21</p>
-                    <h2 class="summary-title">teachers</h2>
+                    <h2 class="summary-title">Modules</h2>
                     </div>
                 </div>
                 <div class="summary">
@@ -47,105 +49,97 @@
                     id="summary-icon3"
                     />
                     <div class="summary-text">
-                    <p class="summary-value">9% &#x2193;</p>
+                    <p class="summary-value">9%</p>
                     <h2 class="summary-title">
-                        platform <br />
-                        visitation
+                        finished <br />
+                        Modules
                     </h2>
                     </div>
                 </div>
                 <div class="summary">
-                    <img src="{% static '/images/book.png' %}" alt="CBT summary" id="summary-icon4" />
+                    <img src="{% static '/images/quiz-dark.png' %}" alt="quiz summary" id="summary-icon4" />
                     <div class="summary-text">
                     <p class="summary-value">83%</p>
                     <h2 class="summary-title">
                         Finished <br />
-                        CBT Test
+                        quiz
                     </h2>
                     </div>
                 </div>
-                <div id="student-enroll">
-                    <h3>The number of students per month vs previous year</h3>
-                    <canvas id="myChart1"></canvas>
-        
-                    <script>
-                    var xValues = [
-                        "January",
-                        "February",
-                        "March",
-                        "April",
-                        "May",
-                        "June",
-                        "July",
-                        "August",
-                        "September",
-                        "October",
-                        "November",
-                        "December",
-                    ];
-                    var yValues = [50, 25, 44, 35, 15, 38, 50, 17, 45, 33, 46, 37];
-                    var yValues2 = [50, 10, 45, 33, 46, 37, 54, 49, 44, 24, 35, 50];
-        
-                    new Chart("myChart1", {
-                        type: "bar",
-                        data: {
-                        labels: xValues,
-        
-                        datasets: [
-                            {
-                            label: "This Year",
-                            backgroundColor: "orange",
-                            data: yValues,
-                            },
-                            {
-                            label: "last Year",
-                            backgroundColor: "purple",
-                            data: yValues2,
-                            },
-                        ],
-                        },
-                        options: {
-                        title: {
-                            display: false,
-                            text: "The number of students per month vs previous year",
-                            fontFamily: "Open Sans",
-                            fontColor: "rgb(100, 100, 100)",
-                            fontSize: 13,
-                        },
-        
-                        legend: {
-                            display: true,
-                            position: "bottom",
-                            labels: {
-                            fontColor: "rgb(100, 100, 100)",
-                            fontFamily: "Roboto",
-                            fontSize: 10,
-                            },
-                        },
-                        scales: {
-                            yAxes: [
-                            {
-                                ticks: {
-                                beginAtZero: true,
-                                fontColor: "rgb(100, 100, 100)",
-                                fontSize: "8",
-                                fontFamily: "Roboto",
-                                },
-                            },
-                            ],
-                            xAxes: [
-                            {
-                                ticks: {
-                                fontColor: "rgb(100, 100, 100)",
-                                fontSize: "10",
-                                fontFamily: "Roboto",
-                                },
-                            },
-                            ],
-                        },
-                        },
-                    });
-                    </script>
+                <div id="course-enroll">
+                    <h3>Courses in progress</h3>
+                    <div class="course-card">
+                        <img src="{% static '/images/images2.jpg' %}" alt="" class="course-card-img">
+                        <div class="course-card-text">
+                            <p class="course-card-author">Al-amin Ahmad Abbas</p>
+                            <h4 class="course-card-title">Introduction to GIS for Microplanning </h4>
+                             <div class="progress-container">
+                                <p class= "course-card-modules">
+                                    8 Modules
+                                </p>
+                                <div class="course-card-progress">
+                                    <canvas class="progress-chart" width="80px"></canvas>
+                                    <p class="course-progress-text">100%</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="course-card">
+                        <img src="{% static '/images/images2.jpg' %}" alt="" class="course-card-img">
+                        <div class="course-card-text">
+                            <p class="course-card-author">Al-amin Ahmad Abbas</p>
+                            <h4 class="course-card-title">Introduction to GIS for Microplanning </h4>
+                             <div class="progress-container">
+                                <p class= "course-card-modules">
+                                    8 Modules
+                                </p>
+                                <div class="course-card-progress">
+                                    <canvas class="progress-chart" width="80px"></canvas>
+                                    <p class="course-progress-text">65%</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="course-card">
+                        <img src="{% static '/images/images2.jpg' %}" alt="" class="course-card-img">
+                        <div class="course-card-text">
+                            <p class="course-card-author">Al-amin Ahmad Abbas</p>
+                            <h4 class="course-card-title">Introduction to GIS for Microplanning </h4>
+                             <div class="progress-container">
+                                <p class= "course-card-modules">
+                                    8 Modules
+                                </p>
+                                <div class="course-card-progress">
+                                    <canvas class="progress-chart" width="80px"></canvas>
+                                    <p class="course-progress-text">10%</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="course-card">
+                        <img src="{% static '/images/images2.jpg' %}" alt="" class="course-card-img">
+                        <div class="course-card-text">
+                            <p class="course-card-author">Al-amin Ahmad Abbas</p>
+                            <h4 class="course-card-title">Introduction to GIS for Microplanning </h4>
+                             <div class="progress-container">
+                                <p class= "course-card-modules">
+                                    8 Modules
+                                </p>
+                                <div class="course-card-progress">
+                                    <canvas class="progress-chart" width="80px"></canvas>
+                                    <p class="course-progress-text">50%</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
                 </div>
                 <div id="teacher-progress">
                     <h3>Teachers Progress</h3>
