@@ -9,3 +9,10 @@ def index(request):
 
 def student_dashboard(request):
     return render(request, "lms/student_dashboard.html")
+
+
+def student_courses(request):
+    return render(request, "lms/student_courses.html")
+
+def student_modules(request):
+    return render(request, "lms/student_modules.html")

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_link %} 
+    <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/student_modules.css' %}">
+    <script  defer src="{% static 'script/dashboard.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock  %}
+{% block title %}Dashboard{% endblock  %}
+{% block  navigation%}
+{% include "./includes/bottom_nav.html" %}
+{% endblock  %}
+{% block  main %}
+    <main>
+        <div id='side-navigation'>
+            {% include "./includes/side_nav.html" %}
+        </div>
+        <div id="contents">
+            <div id="contents-header" >
+                <img src="{% static '/images/images2.jpg' %}" alt="" id="contents-header-img">
+                <div>
+                    <p id="course-heading">Introduction to GIS for Microplanning</p>
+                </div>
+            </div>
+            <section class="section-ongoing">
+                <h1>Ongoing Courses</h1>
+                <div class="course-box">
+                    <div class="course-text">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                            Professional Certificates, and degrees from world-class universities and companies.
+                            Start, switch, or advance your career with more than 5,000 courses, 
+                            Professional Certificates, and degrees from world-class universities and companies</p>
+                        <a href="" class="course-button">More &#x2192</a>   
+                    </div>
+                    <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                </div>
+            </section> 
+            
+        </div>
+    </main>
+{% endblock  %}

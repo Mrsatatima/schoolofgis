@@ -1,0 +1,41 @@
+#contents-header{
+    align-items: center;
+
+
+}
+#contents-header-img{
+    margin-top: 1rem;
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
+
+}
+#contents-header div{
+    width: 95%;
+    height: 210px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    margin-top: -210px;
+
+}
+
+#course-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: var(--color-primary-white-500);
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    
+    #contents-header div,
+    #contents-header-img{
+        width: 100%;
+        
+    
+    }
+
+}
