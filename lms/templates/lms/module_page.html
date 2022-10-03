@@ -1,14 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block css_link %} 
-    <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/student_courses.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/student_modules.css' %}">
-
-    <script  defer src="{% static 'script/dashboard.js' %}"></script>
-    <script  defer src="{% static 'script/modules.js' %}"></script>
-
+    <link rel="stylesheet" href="{% static 'styles/module_page.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {% endblock  %}
@@ -16,5 +9,35 @@
 {% block  navigation%}
 {% endblock  %}
 {% block  main %}
+    <main>
+        <div id="module-header" >
+            <img src="{% static '/images/images2.jpg' %}" alt="" id="module-header-img">
+            <div>
+                <nav>
+                    <ul >
+                        <li>
+                            <a href="" class = "title-nav-link">Home</a>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <a href="" class = "title-nav-link" > Introduction to GIS for Microplanning</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p id="module-heading">Introduction to GIS for Microplanning</p>
+            </div>
+        </div>
+       
+        <div id="descripton">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="materials">
+            <div class="materials-heading">
+                <p ></p>
+            </div>
+
+        </div>
+    </main>
     
 {% endblock  %}
