@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css_link %} 
+    <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/student_courses.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/student_modules.css' %}">
+
+    <script  defer src="{% static 'script/dashboard.js' %}"></script>
+    <script  defer src="{% static 'script/modules.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock  %}
+{% block title %}Dashboard{% endblock  %}
+{% block  navigation%}
+{% endblock  %}
+{% block  main %}
+    
+{% endblock  %}

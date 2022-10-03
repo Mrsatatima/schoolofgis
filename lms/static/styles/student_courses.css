@@ -41,9 +41,13 @@
    text-align: center;
    width: fit-content;
   }
-
+  .course-button:hover{
+    background-color: var(--color-primary-blue-500);
+    color: var(--color-primary-white-500);
+  
+  }
   .course-image {
-    width: 40%;
+    width: 30%;
     object-fit: cover;
   }
 
@@ -51,6 +55,14 @@
 
     #contents{
         min-height: 1300px;
+    } 
+  
+  }
+  @media screen and  (min-width: 1029px) {
+
+    #contents{
+        max-height: 1300px;
+        overflow: auto;
     } 
   
   }
@@ -73,8 +85,13 @@
 
       }
    }
+   @media screen and (max-width: 290px) {
+    main{
+      min-height: 60%;
+    }
+   }
 
-  @media screen and (max-width: 290px) {
+  @media screen and (max-width: 1029px) {
     .summary{
        flex-direction: column;
        justify-content: space-evenly;

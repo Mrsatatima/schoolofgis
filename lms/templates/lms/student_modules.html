@@ -3,8 +3,12 @@
 {% block css_link %} 
     <link rel="stylesheet" href="{% static 'styles/includes/navigation.css' %}">
     <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/student_courses.css' %}">
     <link rel="stylesheet" href="{% static 'styles/student_modules.css' %}">
+
     <script  defer src="{% static 'script/dashboard.js' %}"></script>
+    <script  defer src="{% static 'script/modules.js' %}"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {% endblock  %}
@@ -25,17 +29,243 @@
                 </div>
             </div>
             <section class="section-ongoing">
-                <h1>Ongoing Courses</h1>
-                <div class="course-box">
-                    <div class="course-text">
+                <div class="module-card">
+                    <div class="minimize">
                         <h1 class="course-header">Introduction to GIS for Microplanning</h1>
-                        <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
-                            Professional Certificates, and degrees from world-class universities and companies.
-                            Start, switch, or advance your career with more than 5,000 courses, 
-                            Professional Certificates, and degrees from world-class universities and companies</p>
-                        <a href="" class="course-button">More &#x2192</a>   
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
                     </div>
-                    <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="minimize">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
+                    </div>
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="minimize">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
+                    </div>
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="minimize">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
+                    </div>
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="minimize">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
+                    </div>
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="minimize">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
+                    </div>
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="minimize">
+                        <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                        <div class="completion">
+                            <canvas class="module-chart" style="width:60px;" ></canvas>
+                            <p class="value">55%</p>
+                            <h2 class="title">Completed</h2>
+                        </div>
+                        <button class="expand">&#x27A4</button>                        
+                    </div>
+                    <div class="maximize">
+                        <div class="course-text">
+                            <div class="top">
+                                <h1 class="course-header">Introduction to GIS for Microplanning</h1>
+                                <div class="completion">
+                                    <canvas class="module-chart" style="width:60px;" ></canvas>
+                                    <p class="value">55%</p>
+                                    <h2 class="title">Completed</h2>
+                                </div>
+                            </div>
+                            <p class="course-p">Start, switch, or advance your career with more than 5,000 courses, 
+                                Professional Certificates, and degrees from world-class universities and companies.
+                                </p>
+                            <div class="buttons">
+                                <div class="shrink">
+                                    <p>Shrink</p>
+                                    <span class="close"> &#x25B2</span>                         
+                                </div>
+                                <a href="" class="course-button">View Course&#x2192</a>
+                            </div>
+                        </div>
+                        <img src="{% static '/images/images.jpeg' %}" alt="" class="course-image">
+                    </div>
                 </div>
             </section> 
             

@@ -16,3 +16,7 @@ def student_courses(request):
 
 def student_modules(request):
     return render(request, "lms/student_modules.html")
+
+
+def module_page(request):
+    return render(request, "lms/module_page.html")
