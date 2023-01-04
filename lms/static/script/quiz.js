@@ -5,3 +5,16 @@ const questions = document.querySelectorAll(".quiz-content");
 const questionNavButton = document.querySelectorAll(".nav-button");
 const options = document.querySelectorAll(".quiz-options");
 const submit = document.querySelector(".submit-button");
+
+const minimizeQuestionNav = () => {
+    hambuger.classList.toggle("active");
+    questionGroup.classList.toggle("active");
+  };
+
+
+
+
+
+
+
+hambuger.addEventListener("click", minimizeQuestionNav);
