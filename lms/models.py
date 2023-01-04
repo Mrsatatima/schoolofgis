@@ -27,8 +27,10 @@ class Course(Info):
 
 
 class Module(Info):
-    course_material = models.FileField(upload_to=None, max_length=100, blank=True)
-    practical_exercise = models.FileField(upload_to=None, max_length=100, blank=True)
+    course_material = models.FileField(
+        upload_to=None, max_length=100, blank=True)
+    practical_exercise = models.FileField(
+        upload_to=None, max_length=100, blank=True)
     course = models.ForeignKey("Course", on_delete=models.CASCADE,
                                related_name="modules",
                                related_query_name="module")
@@ -46,7 +48,7 @@ class Student(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.username)
         super(Student, self).save(*args, **kwargs)
- 
+
     def __str__(self):
         return f"{self.name}"
 
@@ -57,7 +59,6 @@ class Quiz(models.Model):
     question = models.CharField(max_length=250)
     options = models.CharField(max_length=250)
     answer = models.CharField(max_length=100)
-    
 
     class Meta:
         verbose_name_plural = "quizes"
