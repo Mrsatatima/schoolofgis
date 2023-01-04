@@ -98,6 +98,84 @@ const navigateQuestions = (event) => {
   selectQuestion(indx);
 };
 
+const gradeQuiz = () => {
+  let indx = 0;
+  const newElement = document.createElement("div");
+  const newElementmessage = document.createElement("div");
+  const mainElement = document.getElementsByTagName("main");
+  const parentButton = document.getElementById("buttons");
+  const newButton = document.createElement("a");
+
+  let finalScore = 0;
+  for (const question of questions) {
+    let score;
+    let positiveScore = 0;
+    let negativeScore = 0;
+    let average;
+    console.log(indx, Object.keys(answers));
+
+    let correctScore = answers[Object.keys(answers)[indx]].length;
+
+    for (const option of question.children[1].children) {
+      if (
+        option.children[0].checked &&
+        answers[Object.keys(answers)[indx]].includes(option.children[0].value)
+      ) {
+        option.classList.toggle("correct");
+        positiveScore++;
+      } else if (
+        option.children[0].checked &&
+        !answers[Object.keys(answers)[indx]].includes(option.children[0].value)
+      ) {
+        option.classList.toggle("wrong");
+        negativeScore++;
+      }
+      option.children[0].setAttribute("disabled", false);
+      // console.log( option.children[0].disable);
+    }
+    score = positiveScore === 0 ? 0 : positiveScore + negativeScore;
+    average =
+      score > correctScore ? correctScore / score : score / correctScore;
+    markQuestionNumber(indx, average);
+    indx++;
+    finalScore += average;
+  }
+
+  finalScore = (finalScore / questions.length) * 100;
+  const text = `Your score is ${finalScore}%`;
+  console.log(finalScore, text);
+
+  const htmlText = `<p class="score-message">Your score is ${finalScore}% </p><div class="open-button">Review Answers</div><div class="close-button">Close Quiz</div>`;
+
+  newElement.classList.add("prompt-shadow");
+  newElementmessage.classList.add("prompt-message");
+  newElement.appendChild(newElementmessage);
+  newElementmessage.insertAdjacentHTML("beforeend", htmlText);
+
+  document.body.appendChild(newElement);
+  const closeQuiz = newElementmessage.children[2];
+  const openReview = newElementmessage.children[1];
+
+  closeQuiz.addEventListener("click", () => {
+    window.location.href = "/blank.html";
+  });
+  const reviewPage = () => {
+    currentQuestion = 0;
+    disableNav();
+    removeActive();
+    questions[currentQuestion].classList.toggle("active");
+    questionNumbers[currentQuestion].classList.toggle("active");
+    newButton.textContent = "Finish Review";
+    newButton.classList.add("finish-button");
+    newButton.href = "/blank.html";
+    parentButton.replaceChild(newButton, submit);
+    console.dir(newElement);
+    document.body.removeChild(newElement);
+  };
+  openReview.addEventListener("click", reviewPage);
+  // newElement.addEventListener("click", reviewPage)
+};
+
 questions[currentQuestion].classList.toggle("active");
 questionNumbers[currentQuestion].classList.toggle("active");
 disableNav();
