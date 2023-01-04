@@ -31,7 +31,71 @@ const minimizeQuestionNav = () => {
     });
   };
 
+  const disableNav = () =>{
+    if (currentQuestion=== 0 && questionNavButton[0].textContent =="Prev") {
+      questionNavButton[0].classList.add("pointer");
+     }
+     if(currentQuestion !== 0 && questionNavButton[0].textContent =="Prev") {
+      questionNavButton[0].classList.remove("pointer"); 
+     }
+     if (currentQuestion=== questions.length-1 && questionNavButton[1].textContent =="Next"){
+      questionNavButton[1].classList.add("pointer"); 
+     }
+     if (currentQuestion!== questions.length-1 && questionNavButton[1].textContent =="Next") {
+      questionNavButton[1].classList.remove("pointer");
+     }
+  }
   
+  const makeIndexWithinRange = (num) => {
+    if (num < 0) {
+      return 0;
+    } else if (num > questions.length - 1) {
+      return questions.length - 1;
+    }
+    return num;
+  };
+  
+  const addAsweredQuestioncolor = (answers, indx) => {
+    for (const answer of answers.children) {
+      if (answer.children[0].checked) {
+        questionNumbers[indx].classList.add("answered");
+        break;
+      } else {
+        questionNumbers[indx].classList.remove("answered");
+      }
+    }
+  };
+  
+  const selectQuestion = (indx) => {
+    addAsweredQuestioncolor(
+      questions[currentQuestion].children[1],
+      currentQuestion
+    );
+    if (indx !== currentQuestion) {
+      removeActive();
+      if (indx <= questions.length - 1) {
+        toggleActive(indx);
+      } else {
+        questionNumbers[indx].classList.toggle("active");
+      }
+      currentQuestion = indx;
+    disableNav()
+  
+    }
+  };
+  
+  const navigateQuestions = (event) => {
+    if (event.target.textContent === "Prev") {
+      indx = makeIndexWithinRange(currentQuestion - 1);
+      
+    } else {
+      indx = makeIndexWithinRange(currentQuestion + 1);
+  
+    }
+    selectQuestion(indx);
+  };
+
+
 
 
 
