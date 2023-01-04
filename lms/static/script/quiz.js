@@ -100,6 +100,17 @@ const navigateQuestions = (event) => {
 
 questions[currentQuestion].classList.toggle("active");
 questionNumbers[currentQuestion].classList.toggle("active");
-disableNav()
+disableNav();
 
 hambuger.addEventListener("click", minimizeQuestionNav);
+
+for (let indx = 0; indx < questionNumbers.length; indx++) {
+  questionNumbers[indx].addEventListener(
+    "click",
+    selectQuestion.bind(this, indx)
+  );
+}
+
+for (const nav of questionNavButton) {
+  nav.addEventListener("click", navigateQuestions);
+}
