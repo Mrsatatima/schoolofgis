@@ -123,3 +123,100 @@
     width: 100%;
 }
 
+.quiz-content{
+    display: none;
+   
+   background-color: white;
+   padding: 1rem 1rem;
+   top: 0;
+}
+.quiz-content.active{
+   /* display: block; */
+   display: block;
+}
+
+.quiz-question,
+.quiz-options{
+   border: solid 1px rgb(8, 122, 216);
+   border-radius: 10px;
+   padding: 1rem;
+   margin: 0 0 2rem 0;
+
+}
+.quiz-question{
+   margin-bottom: 2rem;
+}
+
+h2{
+   color: rgb(8, 122, 216);
+   font-size: 2rem;
+
+}
+
+.question{
+   font-size: 1.5rem;
+   line-height: 1.5;
+
+}
+
+input,
+label{
+   display: block;
+}
+
+.option-group{
+   display: flex;
+   gap: 1.5rem;
+   margin-bottom: 1.5rem;
+   align-items: center;
+}
+.option-group.correct{
+   background-color: rgba(158, 252, 115, 0.5);
+}
+.option-group.wrong{
+   background-color: rgba(247, 99, 99, 0.5);
+}
+.option-check{
+   width: 30px;
+   height: 30px;
+   margin: 0;
+}
+
+.option-label{
+   width: 90%;
+   font-size: 1.5rem;
+   margin: 0;
+   line-height: 1.5;
+}
+
+#buttons{
+   bottom: 0;
+   width: 300px;
+   margin:  0 auto;
+   display: flex;
+   justify-content: space-evenly;
+   padding: 1rem;
+   
+}
+
+.nav-button,
+.submit-button,
+.finish-button{
+   padding: 1rem .5rem;
+   color: white;
+   background-color: rgb(8, 122, 216);
+   border-radius: 5px;
+   font-size: 1rem;
+}
+.nav-button.pointer{
+   background-color: rgb(191, 193, 196);
+   color: rgb(2, 2, 160);
+   pointer-events: none;
+}
+
+.submit-button,
+.finish-button{
+   padding: 1rem 1rem;
+   background-color: green;
+   text-decoration: none;
+}
