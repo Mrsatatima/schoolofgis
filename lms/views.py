@@ -14,9 +14,14 @@ def student_dashboard(request):
 def student_courses(request):
     return render(request, "lms/student_courses.html")
 
+
 def student_modules(request):
     return render(request, "lms/student_modules.html")
 
 
 def module_page(request):
     return render(request, "lms/module_page.html")
+
+
+def quiz_page(request):
+    return render(request, "lms/quiz.html")
