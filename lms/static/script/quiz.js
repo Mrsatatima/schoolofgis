@@ -192,3 +192,5 @@ for (let indx = 0; indx < questionNumbers.length; indx++) {
 for (const nav of questionNavButton) {
   nav.addEventListener("click", navigateQuestions);
 }
+
+submit.addEventListener("click", gradeQuiz);
