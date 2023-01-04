@@ -5,15 +5,15 @@
   display: block;
   margin: 1rem auto 0 auto;
   width: 95%;
-  height: 200px;
+  height: 100px;
   object-fit: cover;
 }
 #module-header div {
   width: 95%;
-  height: 210px;
+  height: 110px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
-  margin-top: -210px;
+  margin-top: -110px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -140,11 +140,11 @@
 
 h2 {
   color: rgb(8, 122, 216);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .question {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -173,7 +173,7 @@ label {
 
 .option-label {
   width: 90%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
   line-height: 1.5;
 }
@@ -289,8 +289,18 @@ label {
   }
 }
 @media screen and (max-width: 700px) {
+
+    #module-header-img {
+        height: 80px;
+        object-fit: cover;
+      }
+      #module-header div {
+        height: 90px;
+        margin-top: -90px;
+      }
   #module-heading {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    padding-top: 30px;
   }
   .question-group {
     width: fit-content;
