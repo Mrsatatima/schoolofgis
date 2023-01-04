@@ -110,6 +110,18 @@ const navigateQuestions = (event) => {
   selectQuestion(indx);
 };
 
+const markQuestionNumber = (indx, score) =>{
+    if (score === 0){
+      questionNumbers[indx].classList.add("wrong")
+    }else if (score ==1) {
+      questionNumbers[indx].classList.add("correct")
+      
+    } else {
+      questionNumbers[indx].classList.add("partial")
+  
+    }
+  }
+  
 const gradeQuiz = () => {
   let indx = 0;
   const newElement = document.createElement("div");
