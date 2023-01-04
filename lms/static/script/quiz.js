@@ -7,6 +7,18 @@ const options = document.querySelectorAll(".quiz-options");
 const submit = document.querySelector(".submit-button");
 
 let currentQuestion = 0;
+const answers = {
+    1: ["A noun is the name of a person, animal, place or thing."],
+    2: ["A noun is the name of a person, animal, place or thing."],
+    3: ["A noun is the name of a person, animal, place or thing."],
+    4: ["A noun is the name of a person, animal, place or thing."],
+    5: ["A noun is the name of a person, animal, place or thing."],
+    6: ["A noun is the name of a person, animal, place or thing."],
+    7: ["A noun is the name of a person, animal, place or thing."],
+    8: ["A noun is the name of a person, animal, place or thing."],
+    9: ["A noun is the name of a person, animal, place or thing."],
+    10: ["A noun is the name of a person, animal, place or thing."],
+  };
 
 const minimizeQuestionNav = () => {
   hambuger.classList.toggle("active");
