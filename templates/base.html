@@ -32,9 +32,16 @@
                    </div>
                     <p class="user-name"> Abdullahi</p>
                   </a>
-                  <a href="">
-                    <p id="profile-name">login</p>
-                  </a>
+                  {% if  user.is_authenticate%}
+                    <a href="{% url 'logout_page' %}">
+                      <p id="profile-name">logout</p>
+                    </a>
+                  {% else %}
+                    <a href="{% url 'login_page' %}">
+                      <p id="profile-name">login</p>
+                    </a>
+                  {% endif %}
+                  
             </div>
         </div>
        

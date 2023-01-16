@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+</head>
+<body>
+    <main>
+        <section id="login-contents">
+            <form action="{% url 'login_page' %}" method="post">
+                {% csrf_token %}
+
+                <div class="input-group">        
+                    <input type="text" name="username" id="username" class="Input-value" required>
+                    <label for="username" class="label">username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="" class="input-value" required>
+                    <label for="password">Password</label>
+                </div>
+                <div id="buttons">
+                    <button class="button">Sign in</button>
+                    <a href="">Sign up</a>
+                </div>
+                {% if  error_message%}
+                    <div>{{ error_message}}</div>
+                {% endif %}
+                {% if   user == None%}
+                    <div>You have an account</div>
+                {% endif %}
+            </form>
+        </section>
+    </main>
+</body>
+</html>

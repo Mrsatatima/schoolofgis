@@ -177,12 +177,13 @@
   box-shadow: 4px 4px rgba(149, 69, 53, .2);
   background-color: var(--color-primary-white-500);
   overflow: hidden;
-  transition: border .2s;
+  /* transition: border .2s; */
+  margin-bottom: 5px;
 
 }
 .section-course:hover,
 .section-testimony:hover{
-  border: solid 4px var(--color-primary-blue-500);
+  border: solid 2px var(--color-primary-blue-500);
   box-shadow:none
 }
 .section-course-img{

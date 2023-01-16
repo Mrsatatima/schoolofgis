@@ -1,0 +1,51 @@
+html{
+    background-color: rgb(206, 198, 198);
+}
+body{
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+#login-contents{
+    padding: 10rem;
+    margin: 100px auto 0 auto;
+    background-color: rgb(255, 255, 255) ;
+    width:500px;
+    filter: drop-shadow(0 0 15px rgb(248, 102, 5));
+    border-radius: 15px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  input {
+    border: solid 1.5px rgb(248, 102, 5);
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 1rem;
+    color:rgb(248, 102, 5);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  label,
+  input:invalid ~ label{
+    position: absolute;
+    left: 16px;
+    color: rgb(248, 102, 5);
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  input:focus {
+    outline: none;
+    border: 1.5px solid rgb(248, 102, 5);
+  }
+
+  input:focus ~ label,
+  input:valid ~ label{
+    transform: translateY(-50%) scale(0.8);
+    background-color: rgb(255, 255, 255);
+    padding: 0 0.2em;
+    color: rgb(248, 102, 5);
+  }
