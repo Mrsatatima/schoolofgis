@@ -27,6 +27,10 @@ class Course(Info):
 
 
 class Module(Info):
+    name = models.CharField(max_length=50)
+    summary = models.TextField(max_length=200, blank=True)
+    description = models.FileField(
+        upload_to=None, max_length=100, blank=True)
     course_material = models.FileField(
         upload_to=None, max_length=100, blank=True)
     practical_exercise = models.FileField(
@@ -59,6 +63,7 @@ class Quiz(models.Model):
     question = models.CharField(max_length=250)
     options = models.CharField(max_length=250)
     answer = models.CharField(max_length=100)
+
 
     class Meta:
         verbose_name_plural = "quizes"

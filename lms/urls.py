@@ -8,9 +8,8 @@ urlpatterns = [
     path('student/modules', views.student_modules, name="student_modules"),
     path('student/module', views.module_page, name="module_page"),
     path('student/quiz', views.quiz_page, name="quiz_page"),
-
-
-
+    path('login', views.login_page, name="login_page"),
+    path('logout', views.logout_page, name="logout_page"),
 
 
 ]
